@@ -12,7 +12,11 @@ thirdparty/CMSIS_5/
 thirdparty/STM32F103X_HAL/
 thirdparty/cmsis-header-stm32/
 thirdparty/libcanard/
+thirdparty/*
 **/generated_files
+**/CMakeFiles/
+**/cmake_install.cmake
+**/Makefile
 
 *.log
 **/cache/**

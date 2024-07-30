@@ -1,4 +1,4 @@
-name: rtos-build
+name: canbus-build
 
 concurrency:
     group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
@@ -7,7 +7,7 @@ concurrency:
 on: [pull_request]
 
 jobs:
-  rtos-build-job:
+  canbus-build-job:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -46,8 +46,8 @@ jobs:
 
     - name: can_dump Build Check
       run: |
-        ./docker/run_docker.sh ${{ secrets.DOCKER_REPO }}:master "cd /workspace/can_dump && ./build.sh"
+        ./docker/run_docker.sh ${{ secrets.DOCKER_REPO }}:master "cd /workspace/can_dump && cmake . && make"
 
     - name: custom Build Check
       run: |
-        ./docker/run_docker.sh ${{ secrets.DOCKER_REPO }}:master "cd /workspace/canbus && ./bake.sh all clean build"
+        ./docker/run_docker.sh ${{ secrets.DOCKER_REPO }}:master "cd /workspace && ./bake.sh canbus clean build"
