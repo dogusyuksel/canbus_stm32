@@ -46,7 +46,7 @@ jobs:
 
     - name: can_dump Build Check
       run: |
-        ./docker/run_docker.sh ${{ secrets.DOCKER_REPO }}:master "cd /workspace/can_dump && ./build.sh"
+        ./docker/run_docker.sh ${{ secrets.DOCKER_REPO }}:master "cd /workspace/can_dump && cmake . && make"
 
     - name: custom Build Check
       run: |
