@@ -1,1 +1,1 @@
-reference project: https://github.com/skyyuzhang/UAVCAN_NODE_FreeRTOS
+Please check cjson-build.yml for more details like environment setting, build and testing steps.

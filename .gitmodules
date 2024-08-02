@@ -16,3 +16,6 @@
 [submodule "thirdparty/libcanard"]
 	path = thirdparty/libcanard
 	url = https://github.com/OpenCyphal/libcanard.git
+[submodule "embedded_linting"]
+	path = embedded_linting
+	url = https://github.com/dogusyuksel/embedded_linting
