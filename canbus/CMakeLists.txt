@@ -14,7 +14,7 @@ set(CMAKE_PROJECT_NAME canbus)
 
 # Include toolchain file
 include("gcc-arm-none-eabi.cmake")
-set(CMAKE_C_LINK_FLAGS "${CMAKE_C_LINK_FLAGS} -T \"/workspace/canbus/STM32F103C8Tx_FLASH.ld\"")
+set(CMAKE_C_LINK_FLAGS "${CMAKE_C_LINK_FLAGS} -T \"../STM32F103C8Tx_FLASH.ld\"")
 
 # Enable compile command to ease indexing with e.g. clangd
 set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
